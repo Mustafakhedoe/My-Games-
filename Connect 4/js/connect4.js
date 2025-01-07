@@ -42,8 +42,14 @@ function setPiece(){
         return;
     }
     let coords = this.id.split("-");
+    console.log(coords);
     let r = parseInt(coords[0]);
     let c = parseInt(coords[1]); 
+
+    // (int) "3"  betekent zet "3" om naar 3
+    // (int) "drie" zou een foutmelding geven, want de pc snapt niet dat drie == 3
+    // daarvoor zou je parseInt kunnen gebruiken, die "interpreteert" het getal
+
 
     r = currColumns[c];
     if (r < 0) {
